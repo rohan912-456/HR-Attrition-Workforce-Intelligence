@@ -1,0 +1,83 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Operating System Files
+.DS_Store
+Thumbs.db
+ehthumbs.db
+[Dd]esktop.ini
+
+# Temporary Excel & Office Lock Files
+~$*.xlsx
+~$*.xls
+~$*.csv
+~$*.docx
+*.tmp
+
+# Working / Transition Phase Folders (Preserved locally, excluded from clean repo)
+1.Excel_Phase/
+2.SQL_Phase/
+3.Python_Phase/
+4.PowerBI_Phase/
+Interview pitch guide/
+HR-Employee-Attrition.csv.xlsx
+HR_ATTRITION_COMPLETE_GUIDE (1).pdf
+HR_Employee_Attrition.csv
