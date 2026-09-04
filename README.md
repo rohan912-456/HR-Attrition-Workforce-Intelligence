@@ -75,7 +75,7 @@ The project includes an interactive, 3-page synchronized Power BI report (`power
 
 ## 🔬 Statistical Modeling & Python Visualizations
 
-The Python module (`python/hr_attrition_eda.py`) executes end-to-end data hygiene, computes the full correlation matrix, and validates the 0–3 point scoring system.
+The Jupyter Notebook ([`python/HR_Attrition_Employee_Data_Analyst_Project.ipynb`](python/HR_Attrition_Employee_Data_Analyst_Project.ipynb)) executes end-to-end data hygiene, computes the full correlation matrix, and validates the 0–3 point scoring system.
 
 | 01. Turnover vs. Tenure & Income | 02. Role-Level Attrition Rates |
 | :---: | :---: |
@@ -130,7 +130,7 @@ graph TD
   ```
 
 ### 3. Python (Statistical Validation & Modeling)
-* Executed in [`python/hr_attrition_eda.py`](python/hr_attrition_eda.py).
+* Executed in [`python/HR_Attrition_Employee_Data_Analyst_Project.ipynb`](python/HR_Attrition_Employee_Data_Analyst_Project.ipynb).
 * Evaluated full Pearson correlation matrix across 24 numeric features.
 * Engineered an explainable additive Risk Scoring algorithm:
   $$\text{Risk Score} = \mathbb{I}(\text{OverTime} = \text{'Yes'}) + \mathbb{I}(\text{JobSatisfaction} \le 2) + \mathbb{I}(\text{YearsAtCompany} \le 2)$$
@@ -209,7 +209,7 @@ HR-Attrition-Workforce-Intelligence/
 │   └── 03_risk_segmentation_watchlist.sql <-- Nested CASE WHEN & active watchlist
 │
 ├── python/
-│   ├── hr_attrition_eda.py            <-- Clean, commented EDA & risk scoring script
+│   ├── HR_Attrition_Employee_Data_Analyst_Project.ipynb <-- Comprehensive EDA & risk scoring notebook
 │   └── requirements.txt               <-- Python environment dependencies
 │
 └── power_bi/
@@ -243,8 +243,8 @@ source venv/bin/activate  # On Windows: venv\Scripts\activate
 # Install dependencies
 pip install -r python/requirements.txt
 
-# Execute EDA and model validation
-python python/hr_attrition_eda.py
+# Launch and run the analysis notebook
+jupyter notebook python/HR_Attrition_Employee_Data_Analyst_Project.ipynb
 ```
 
 ### 4. Explore the Power BI Dashboard
