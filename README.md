@@ -35,7 +35,7 @@ By implementing a multi-stage analytics pipeline across **Excel, MySQL, Python, 
 
 ## 📊 Interactive Dashboard Walkthrough (Power BI)
 
-The project includes an interactive, 3-page synchronized Power BI report (`power_bi/HR_Attrition_Dashboard.pbix`) built with DAX measures, pre-attentive color semantics (Green = Retained/Low-Risk, Red = Leaver/High-Risk), and cross-filtering slicers.
+The project includes an interactive, 3-page synchronized Power BI report (`power_bi/HR_Attrition_Visualization.pbix`) built with DAX measures, pre-attentive color semantics (Green = Retained/Low-Risk, Red = Leaver/High-Risk), and cross-filtering slicers.
 
 ### Page 1: Executive Overview
 ![Executive Overview](assets/dashboards/page1_executive_overview.png)
@@ -213,7 +213,7 @@ HR-Attrition-Workforce-Intelligence/
 │   └── requirements.txt               <-- Python environment dependencies
 │
 └── power_bi/
-    └── HR_Attrition_Dashboard.pbix    <-- Interactive 3-page Power BI dashboard
+    └── HR_Attrition_Visualization.pbix <-- Interactive 3-page Power BI dashboard
 ```
 
 ---
@@ -248,7 +248,7 @@ jupyter notebook python/HR_Attrition_Employee_Data_Analyst_Project.ipynb
 ```
 
 ### 4. Explore the Power BI Dashboard
-* Open `power_bi/HR_Attrition_Dashboard.pbix` in [Power BI Desktop](https://powerbi.microsoft.com/).
+* Open `power_bi/HR_Attrition_Visualization.pbix` in [Power BI Desktop](https://powerbi.microsoft.com/).
 * Verify data relationships and interact with the 3 report pages using synchronized slicers.
 
 ---
