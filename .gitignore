@@ -71,13 +71,3 @@ ehthumbs.db
 ~$*.csv
 ~$*.docx
 *.tmp
-
-# Working / Transition Phase Folders (Preserved locally, excluded from clean repo)
-1.Excel_Phase/
-2.SQL_Phase/
-3.Python_Phase/
-4.PowerBI_Phase/
-Interview pitch guide/
-HR-Employee-Attrition.csv.xlsx
-HR_ATTRITION_COMPLETE_GUIDE (1).pdf
-HR_Employee_Attrition.csv
