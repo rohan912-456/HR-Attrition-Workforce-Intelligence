@@ -1,5 +1,10 @@
 # HR Attrition & Workforce Intelligence
 
+[![Stack](https://img.shields.io/badge/Analytics_Stack-Excel_%7C_MySQL_%7C_Python_%7C_Power_BI-blue?style=for-the-badge&logo=powerbi)](https://github.com/rohan912-456)
+[![Python Version](https://img.shields.io/badge/Python-3.9%2B-3776AB?style=for-the-badge&logo=python&logoColor=white)](python/requirements.txt)
+[![Database](https://img.shields.io/badge/SQL-MySQL_8.0-orange?style=for-the-badge&logo=mysql&logoColor=white)](sql/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](LICENSE)
+
 Built an end-to-end data analytics project using Excel, SQL, Python, and Power BI to analyze HR data for 1,470 employees and find out why people leave the company.
 
 The project uses a 35-column dataset to figure out what causes voluntary attrition and creates a watchlist to predict who might leave next.
