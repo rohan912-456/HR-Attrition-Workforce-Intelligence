@@ -44,7 +44,11 @@ Audited 1,470 employee records across 35 columns for quality issues. Used pivot 
 **Relational Queries & Risk Engine**<br>
 Wrote 8 SQL queries using GROUP BY, HAVING, and nested CASE WHEN to break down attrition by department, job role, overtime, and income. Built a 3-tier risk model — High Risk employees leave at **36.60%** vs just **8.46%** for Low Risk (~4.3x gap).
 ```sql
-CASE WHEN OverTime = 'Yes' AND JobSatisfaction <= 2 THEN 'High Risk' WHEN OverTime = 'Yes' OR JobSatisfaction <= 2 THEN 'Medium Risk' ELSE 'Low Risk' END
+CASE 
+    WHEN OverTime = 'Yes' AND JobSatisfaction <= 2 THEN 'High Risk' 
+    WHEN OverTime = 'Yes' OR JobSatisfaction <= 2 THEN 'Medium Risk' 
+    ELSE 'Low Risk' 
+END
 ```
 
 ### 🐍 Phase 3: Python
@@ -58,7 +62,11 @@ corr_matrix = df_clean[key_cols].corr()
 **Interactive 3-Page Dashboard**<br>
 Built a 3-page Power BI report using DAX measures. Page 1 gives the executive overview (overall 16.1% attrition), Page 2 breaks down who is leaving and why, and Page 3 shows the live watchlist of **153 currently active at-risk employees**.
 ```dax
-Attrition Rate = DIVIDE(CALCULATE(COUNTROWS('HR-Employee-Attrition'), 'HR-Employee-Attrition'[Attrition]="Yes"), COUNTROWS('HR-Employee-Attrition'))
+Attrition Rate = 
+DIVIDE(
+    CALCULATE(COUNTROWS('HR-Employee-Attrition'), 'HR-Employee-Attrition'[Attrition]="Yes"), 
+    COUNTROWS('HR-Employee-Attrition')
+)
 ```
 
 ## 💡 Strategic Recommendations for HR Leadership
@@ -73,11 +81,11 @@ Attrition Rate = DIVIDE(CALCULATE(COUNTROWS('HR-Employee-Attrition'), 'HR-Employ
 ## Repository Directory Structure
 ```text
 HR-Attrition-Workforce-Intelligence/
-├── README.md                                 <-- Executive case study & business r
-├── LICENSE                                   <-- MIT License
-├── .gitignore                                <-- Ignores temp Excel (~$*), Python
+├── README.md                           <-- Executive case study
+├── LICENSE                             <-- MIT License
+├── .gitignore                          <-- Ignores temp files
 │
-├── assets/                                   <-- Visual assets rendered in README
+├── assets/                             <-- Visual assets
 │   ├── dashboards/
 │   │   ├── page1_executive_overview.png
 │   │   ├── page2_deep_dive.png
@@ -90,34 +98,34 @@ HR-Attrition-Workforce-Intelligence/
 │
 ├── data/
 │   ├── raw/
-│   │   └── HR-Employee-Attrition.csv         <-- Original raw dataset (1,470 recor
+│   │   └── HR-Employee-Attrition.csv   <-- Original raw dataset
 │   └── processed/
-│       ├── dept_attrition.csv                <-- Departmental summary
-│       ├── dept_attrition_python.csv         <-- Departmental summary (Python)
-│       ├── dept_gender_attrition.csv         <-- Cross-demographic metrics
-│       ├── hr_data_with_risk_score.csv       <-- Full dataset with Python risk scores
-│       ├── income_comparison.csv             <-- Salary comparison metrics
-│       ├── jobrole_attrition.csv             <-- Role-level matrix
-│       ├── overtime_attrition.csv            <-- Overtime breakdown
-│       ├── risk_score_validation.csv         <-- Python score validation
-│       ├── risk_segments.csv                 <-- SQL risk segmentation results
-│       ├── watchlist_employees.csv           <-- 23 high-priority active intervent
-│       └── watchlist_from_python.csv         <-- High-priority active interventions (Python)
+│       ├── dept_attrition.csv          <-- Dept summary
+│       ├── dept_attrition_python.csv   <-- Dept summary (Python)
+│       ├── dept_gender_attrition.csv   <-- Demographic metrics
+│       ├── hr_data_with_risk_score.csv <-- Full dataset with risk scores
+│       ├── income_comparison.csv       <-- Salary metrics
+│       ├── jobrole_attrition.csv       <-- Role-level matrix
+│       ├── overtime_attrition.csv      <-- Overtime breakdown
+│       ├── risk_score_validation.csv   <-- Python score validation
+│       ├── risk_segments.csv           <-- SQL risk segmentation
+│       ├── watchlist_employees.csv     <-- Active interventions (SQL)
+│       └── watchlist_from_python.csv   <-- Active interventions (Python)
 │
 ├── excel/
-│   └── HR_Attrition_Analysis.xlsx            <-- Excel workbook with formulas & pi
+│   └── HR_Attrition_Analysis.xlsx      <-- Excel workbook
 │
 ├── power_bi/
-│   └── HR_Attrition_Visualization.pbix       <-- Interactive 3-page Power BI dashb
+│   └── HR_Attrition_Visualization.pbix <-- Interactive Power BI dash
 │
 ├── python/
-│   ├── HR_Attrition_Employee_Data_Analyst_Project.ipynb <-- Jupyter notebook for EDA & Risk Scoring
-│   └── requirements.txt                      <-- Python environment dependencies
+│   ├── HR_Attrition_Employee_Data_Analyst_Project.ipynb <-- EDA & Risk Scoring
+│   └── requirements.txt                <-- Python dependencies
 │
 └── sql/
-    ├── 01_schema_setup.sql                   <-- Database creation & table schema
-    ├── 02_analytical_queries.sql             <-- Core analytical queries (GROUP BY
-    └── 03_risk_segmentation_watchlist.sql    <-- Nested CASE WHEN & active wat
+    ├── 01_schema_setup.sql             <-- Database & table schema
+    ├── 02_analytical_queries.sql       <-- Core analytical queries
+    └── 03_risk_segmentation_watchlist.sql <-- Nested CASE & watchlist
 ```
 
 ## 👨‍💻 Author & Contact
